@@ -10,86 +10,31 @@
 ## 📑 Table of Contents
 
 - [📖 Course Materials](#-course-materials)
-- [📅 Attendance](#-attendance)
 - [🎯 Assignment Structure & Grading](#-assignment-structure--grading)
 - [📤 Submission](#-submission)
   - [📝 Google Form](#-google-form)
   - [🎥 Demo Video](#-demo-video)
   - [📋 Requirements](#-requirements)
-- [🧪 Experiment Guides](#-experiment-guides)
-  - [Experiment 1](#-experiment-1)
-  - [Experiment 2](#️-experiment-2)
+- [🧪 Experiment Guides](#-experiment-1-guides)
 
 ---
 
 ## 📖 Course Materials
 
-All source materials for the course are available at: <a href="https://github.com/orgs/cu-fs1/repositories">github.com/orgs/cu-fs1/repositories</a>
-
----
-
-## 📅 Attendance
-
-### 📝 Attendance Tracking
-
-Track your attendance and participation using the spreadsheet below:
-
-<div align="center">
-  <a href="https://docs.google.com/spreadsheets/d/1rIUNBFJ8kpd5eLJNa9FCkV1yy-d52vtS9JjHNOlQnOw/edit?usp=sharing">
-    <img src="https://img.shields.io/badge/View%20Attendance%20Spreadsheet-34A853?style=for-the-badge&logo=googlesheets&logoColor=white" alt="View Attendance Spreadsheet" />
-  </a>
-</div>
-
-> [!NOTE]
-> Anyone who was left, please mark your attendance in the comments of the spreadsheet.
-
----
+All source materials for the course are available at: <a href="https://github.com/orgs/cu-fsd2/repositories">github.com/orgs/cu-fs1/repositories</a>
 
 ## 🎯 Assignment Structure & Grading
 
-Each experiment consists of **three parts** with different difficulty levels:
+## Experiment Evaluation Scheme
 
-<table>
-<thead>
-<tr>
-<th>Part</th>
-<th>Difficulty</th>
-<th>Type</th>
-<th>Code Points</th>
-<th>Viva Points</th>
-<th>Total Points</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>📝 <strong>Part A</strong></td>
-<td><code>Easy</code></td>
-<td>In-Class</td>
-<td>12</td>
-<td>3</td>
-<td><strong>15</strong></td>
-</tr>
-<tr>
-<td>🏠 <strong>Part B</strong></td>
-<td><code>Medium</code></td>
-<td>Take-Home</td>
-<td>5</td>
-<td>4</td>
-<td><strong>9</strong></td>
-</tr>
-<tr>
-<td>🎓 <strong>Part C</strong></td>
-<td><code>Hard</code></td>
-<td>Demonstration</td>
-<td>0</td>
-<td>3</td>
-<td><strong>3</strong></td>
-</tr>
-</tbody>
-</table>
+### Marks Distribution
 
-> [!NOTE]
-> **Total Viva Points**: 10 (3 + 4 + 3)
+| Component | Marks |
+|----------|-------|
+| Worksheet/Assignment | 5 |
+| Viva | 10 |
+| Conduct | 15 |
+| MaxMarks | 30 |
 
 ---
 
@@ -100,7 +45,7 @@ Each experiment consists of **three parts** with different difficulty levels:
 Please submit your project details using the following link:
 
 <div align="center">
-  <a href="https://forms.gle/jyG6rjwrGiikiCQv6">
+  <a href="https://forms.gle/3Cac7xx1GJdnwHNz6">
     <img src="https://img.shields.io/badge/Submit%20to%20Google%20Form-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Submit to Google Form" />
   </a>
 </div>
@@ -120,7 +65,7 @@ Please submit your project details using the following link:
 ### 📋 Requirements
 
 
-### 🏠 For Part B (Medium) Assignments
+### 🏠 For WorkSheet/Assignments
 
 You must submit the following inside a Google Form:
 
@@ -231,40 +176,11 @@ Create a comprehensive README equivalent to your practical file:
 - ✅ Document your implementation approach
 - ✅ Include screenshots or demos (if applicable)
 
----
 
-### 🔒 Code Availability
-
-| Component | Availability |
-|-----------|-------------|
-| **Part A & Part B Code** | 🔐 Private until deadline |
-| **README.md Files** | 📖 Available for reference |
-
----
-
-### 💡 Example: Experiment Structure
-
-**Experiment 1** might cover the following topics:
-
-```
-📦 Experiment 1
- ┣ 📂 Flexbox
- ┃ ┣ 📄 README.md (with code snippets & explanations)
- ┃ ┣ 🔗 Deployment link (Vercel/CodeSandbox)
- ┃ ┗ 💻 Source code
- ┣ 📂 Grids
- ┣ 📂 Positioning
- ┗ 📂 JavaScript
-```
-
----
-
-## 🧪 Experiment Guides
-
-## 🎨 Experiment 1
+## 🧪 Experiment 1 Guides
 
 > [!IMPORTANT]
-> **Deadline:** 27 January 2026
+> **Deadline:** 22 January 2026
 
 ### 🛠️ Installation and Setup
 
@@ -279,33 +195,14 @@ Download and install <a href="https://git-scm.com/downloads">Git</a> for version
 #### Step 2: Install VSCode
 Download and install <a href="https://code.visualstudio.com/">Visual Studio Code</a>
 
-#### Step 3: Install Five Server Extension
-Install the **Five Server** extension in VSCode (an improved version of Live Server)
+#### Step 3: Install Live Server Extension
+Install the **Live Server** extension in VSCode (an improved version of Live Server)
 
 1. Open VSCode
 2. Go to Extensions (`Ctrl+Shift+X` or `Cmd+Shift+X`)
 3. Search for "Five Server"
 4. Click Install
 
----
-
-### 📚 Resources
-
-Explore these repositories for reference materials:
-
-| Topic | Repository |
-|-------|-----------|
-| 🔲 **Flexbox** | <a href="https://github.com/cu-fs1/flexbox">github.com/cu-fs1/flexbox</a> |
-| 📍 **Positioning** | <a href="https://github.com/cu-fs1/positioning">github.com/cu-fs1/positioning</a> |
-| 🎯 **Grid** | <a href="https://github.com/cu-fs1/grid">github.com/cu-fs1/grid</a> |
-| 🟨 **JavaScript Basics** | <a href="https://github.com/cu-fs1/javascript-basics">github.com/cu-fs1/javascript-basics</a> |
-
----
-
-## ⚛️ Experiment 2
-
-> [!IMPORTANT]
-> **Deadline:** 5 February 2026
 
 ### 🛠️ Installation and Setup
 
@@ -354,54 +251,10 @@ Set-ExecutionPolicy Unrestricted -Scope CurrentUser
 - `Unrestricted` — Allows all scripts to run, but shows a warning before running scripts from the internet
 - `-Scope CurrentUser` — Applies this policy only to the current user, not system-wide
 
----
 
-### 🚀 Project Setup
 
-#### Step 1: Create Project Folder
 
-Create a folder named `exp-2a` for this experiment
 
-```bash
-mkdir exp-2a
-```
-
----
-
-#### Step 2: Open in VSCode
-
-Open the `exp-2a` folder in VSCode so that all commands run in this project directory
-
-```bash
-code exp-2a
-```
-
----
-
-#### Step 3: Initialize Next.js App
-
-Open the terminal in VSCode and run:
-
-```bash
-pnpm create next-app@latest .
-```
-
-**Command breakdown:**
-- `pnpm` — The pnpm CLI, your package manager
-- `create` — Tells pnpm to run a project scaffolding tool (a "create" script)
-- `next-app@latest` — Uses the *create-next-app* initializer at its latest version to generate a Next.js app
-- `.` — Dot means "current directory", so the app is created inside `exp-2a` instead of a new subfolder
-
----
-
-### 📚 Resources
-
-| Topic | Repository |
-|-------|-----------|
-| ⚛️ **React Basics** | <a href="https://github.com/cu-fs1/react-basics">github.com/cu-fs1/react-basics</a> |
-| 🔢 **Counter** | <a href="https://github.com/cu-fs1/counter">github.com/cu-fs1/counter</a> |
-
----
 
 <div align="center">
 
