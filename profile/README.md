@@ -342,6 +342,17 @@ src/
 
 ---
 
+### ⚠️ Important Instructions
+
+1. **Please Check the Folder Structure Before Pushing to GitHub**  
+   Ensure that your project follows the recommended folder structure as provided in the guides. Incorrect folder structure may lead to issues when reviewing or deploying your project.
+
+2. **Format Deployment Link as Provided in Experiment 1 Guide**  
+   When deploying your project, make sure your deployment link follows the naming convention as shown in the **Experiment 1 Guide**. For example:  
+   `{uid}-{experiment-part}-{name}.vercel.app`  
+   Ensure that the link is formatted correctly to avoid submission errors.
+
+
 ### 📌 Assessment Topic  
 
 This is an **extension of Experiment 2**. Create **one more webpage** related to your previously chosen design, topic, or theme and build upon it.
