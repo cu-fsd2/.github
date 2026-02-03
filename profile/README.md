@@ -11,7 +11,6 @@
 - [📖 Course Materials](#-course-materials)
 - [🎯 Assignment Structure & Grading](#-assignment-structure--grading)
 - [📤 Submission](#-submission)
-  - [📝 Google Form](#-google-form)
   - [🎥 Demo Video](#-demo-video)
   - [📋 Requirements](#-requirements)
 - [🧪 Experiment Guides](#-experiment-1-guides)
