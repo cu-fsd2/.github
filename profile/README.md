@@ -6,9 +6,6 @@
 </div>
 
 ---
-
-## 📑 Table of Contents
-
 ## 📑 Table of Contents
 
 - [📖 Course Materials](#-course-materials)
@@ -20,6 +17,7 @@
 - [🧪 Experiment Guides](#-experiment-1-guides)
   - [🧪 Experiment 1 Guides](#-experiment-1-guides)
   - [🧪 Experiment 2 Guides](#-experiment-2-guides)
+  - [🧪 Experiment 3 Guides](#-experiment-3-guides)
 
 ---
 
