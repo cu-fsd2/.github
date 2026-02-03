@@ -342,7 +342,7 @@ src/
 
 ---
 
-### ⚠️ Important Instructions
+### 🚨 Important Instructions
 
 1. **Please Check the Folder Structure Before Pushing to GitHub**  
    Ensure that your project follows the recommended folder structure as provided in the guides. Incorrect folder structure may lead to issues when reviewing or deploying your project.
