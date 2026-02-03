@@ -320,6 +320,84 @@ src/
 ├── main.jsx
 └── index.css
 ```
+### 📚 Library Installation & Setup
+
+#### 1. **React Setup**
+- Run `npm vite create@latest` to create a new React project choose framework.
+- Navigate into the project folder using `cd your-project-name`.
+- Start the React app by running `npm start`.
+
+#### 2. **Bootstrap Setup**
+- Run `npm install react-bootstrap bootstrap` to install Bootstrap into your project.
+- In your **main.jsx**  file, import the Bootstrap CSS by adding:
+  `import 'bootstrap/dist/css/bootstrap.min.css';`  
+  This will apply Bootstrap's styles globally across your project.
+
+#### 3. **Material UI (MUI) Setup**
+- Run `npm install @mui/material @emotion/react @emotion/styled` to install Material UI.
+- Now, you can start using Material UI components like buttons, cards, etc., in your project by importing them into your React components.
+
+## 🧪 Experiment 3 Guides  
+
+> ⚠️ **Deadline:** 11 February 2026  
+> **Viva:** Will be conducted in the upcoming classes and will be conveyed prior to one class 
+
+---
+
+### 📌 Assessment Topic  
+
+This is an **extension of Experiment 2**. Create **one more webpage** related to your previously chosen design, topic, or theme and build upon it.
+
+You need to:
+- Choose a second page that fits with your first page.
+- **Use React Router** to navigate between the pages.
+
+---
+
+### 🎯 Objective  
+
+- Understand the use of **React Router**  
+- Create **multiple pages** in a React application  
+- Extend the webpage to include more content and structure  
+
+---
+
+### 🧩 Project Requirements  
+
+#### ✅ UI & Design  
+- Maintain **consistent design** with the first page  
+- Ensure **clean UI/UX** across pages  
+- Use **React Router** for page navigation  
+
+#### ✅ Functionality  
+- Create a second page that is related to your initial project  
+- Navigate between the pages using **React Router**  
+- The second page should provide more **information or functionality** based on your theme  
+
+**Example ideas:**
+- **Portfolio website** → Add a **Projects** page  
+- **Product landing page** → Add a **Contact** or **Pricing** page  
+- **College event page** → Add an **RSVP** or **Event Details** page  
+- **Dashboard UI** → Add an **Analytics** or **Settings** page  
+
+---
+
+### 📁 Recommended Folder Structure  
+
+```bash
+src/
+│
+├── components/
+│   ├── Navbar.jsx
+│   ├── Footer.jsx
+│   ├── HeroSection.jsx
+│   └── CardComponent.jsx
+│
+├── pages/
+│   ├── Home.jsx
+│   ├── Projects.jsx     # New page for Experiment 3
+│   └── Contact.jsx      # New page for Experiment 3
+```
 
 <div align="center">
 
