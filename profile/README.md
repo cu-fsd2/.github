@@ -321,7 +321,7 @@ src/
 ### 📚 Library Installation & Setup
 
 #### 1. **React Setup**
-- Run `npm vite create@latest` to create a new React project choose framework.
+- Run `npm create vite@latest` to create a new React project choose framework.
 - Navigate into the project folder using `cd your-project-name`.
 - Start the React app by running `npm start`.
 
