@@ -13,6 +13,7 @@
 - [📤 Submission](#-submission)
   - [🎥 Demo Video](#-demo-video)
   - [📋 Requirements](#-requirements)
+  - [📋 Project Submission Guidelines](#project-submission-guidelines)
 - [🧪 Experiment Guides](#-experiment-1-guides)
   - [🧪 Experiment 1 Guides](#-experiment-1-guides)
   - [🧪 Experiment 2 Guides](#-experiment-2-guides)
@@ -50,6 +51,24 @@ All source materials for the course are available at: <a href="https://github.co
 </div>
 
 ---
+## Project Submission Guidelines
+
+## 1. Repository Structure & Format 📂
+- Ensure that the **repository name** and **structure** match the example shown in the reference image provided.
+
+## 2. Deployment Link 🌐
+- Please **format the deployment link** correctly. If you're facing any issues with this, refer to the provided reference for changing the link format.
+
+## 3. Exclude `node_modules` ❌
+- Do **not** include the **`node_modules`** folder in the zip file. This is important for clean submissions and avoids unnecessary bloat.
+
+## 4. Update README 📝
+- Make sure your **README** is up-to-date and provides clear information about the project.
+- Include a **folder** within the repository to store **screenshots** of the various web pages created for the project. Ideally, **2-3 screenshots** are sufficient.
+
+## 5. Authentic Submission ✅
+- Avoid making **fake GitHub submissions**. Ensure that the repository is legitimate, with relevant files and proper project documentation.
+
 
 ### 📋 Requirements
 
