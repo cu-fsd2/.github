@@ -40,21 +40,7 @@ All source materials for the course are available at: <a href="https://github.co
 | Conduct | 15 |
 | MaxMarks | 30 |
 
----
 
-## 📤 Submission
-
-### 📝 Google Form
-
-Please submit your project details using the following link:
-
-<div align="center">
-  <a href="https://forms.gle/3Cac7xx1GJdnwHNz6">
-    <img src="https://img.shields.io/badge/Submit%20to%20Google%20Form-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Submit to Google Form" />
-  </a>
-</div>
-
----
 
 ### 🎥 Demo Video
 
@@ -186,6 +172,22 @@ Create a comprehensive README equivalent to your practical file:
 > [!IMPORTANT]
 > **Deadline:** 22 January 2026
 
+---
+
+## 📤 Submission
+
+### 📝 Google Form
+
+Please submit your project details using the following link:
+
+<div align="center">
+  <a href="https://forms.gle/3Cac7xx1GJdnwHNz6">
+    <img src="https://img.shields.io/badge/Submit%20to%20Google%20Form-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Submit to Google Form" />
+  </a>
+</div>
+
+---
+
 ### 🛠️ Installation and Setup
 
 #### Step 1: Install Git
@@ -260,7 +262,19 @@ Set-ExecutionPolicy Unrestricted -Scope CurrentUser
 
 > ❗
 > **Deadline:** 4 February 2026  
-> **Viva:** Will be conducted in the upcoming classes from today onwards  
+> **Viva:** Will be conducted in the upcoming classes from today onwards 
+
+### 📝 Google Form
+
+Please submit your project details using the following link:
+
+<div align="center">
+  <a href="https://forms.gle/wiF7sEw1qocrrEUh9">
+    <img src="https://img.shields.io/badge/Submit%20to%20Google%20Form-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Submit to Google Form" />
+  </a>
+</div>
+
+---
 
 ### 🚨 Important Instructions
 
