@@ -9,6 +9,8 @@
 
 ## 📑 Table of Contents
 
+## 📑 Table of Contents
+
 - [📖 Course Materials](#-course-materials)
 - [🎯 Assignment Structure & Grading](#-assignment-structure--grading)
 - [📤 Submission](#-submission)
@@ -16,6 +18,8 @@
   - [🎥 Demo Video](#-demo-video)
   - [📋 Requirements](#-requirements)
 - [🧪 Experiment Guides](#-experiment-1-guides)
+  - [🧪 Experiment 1 Guides](#-experiment-1-guides)
+  - [🧪 Experiment 2 Guides](#-experiment-2-guides)
 
 ---
 
@@ -252,9 +256,70 @@ Set-ExecutionPolicy Unrestricted -Scope CurrentUser
 - `-Scope CurrentUser` — Applies this policy only to the current user, not system-wide
 
 
+## 🧪 Experiment 2 Guides  
 
+> ❗
+> **Deadline:** 4 February 2026  
+> **Viva:** Will be conducted in the upcoming classes from today onwards  
 
+---
 
+### 📌 Assessment Topic  
+
+Design a **modern, sleek, and visually appealing web page** using UI component libraries.
+
+You must use **any one or a combination** of the following:
+- **Bootstrap**
+- **Material UI (MUI)**
+
+---
+
+### 🎯 Objective  
+
+- Learn component-based UI design  
+- Understand folder structuring in React  
+- Build a meaningful, real-world webpage  
+- Apply modern UI/UX principles  
+
+---
+
+### 🧩 Project Requirements  
+
+#### ✅ UI & Design  
+- Clean and modern layout  
+- Proper spacing, typography, and colors  
+- Responsive design (mobile + desktop)  
+
+#### ✅ Functionality  
+- Page should be meaningful, not random  
+
+**Example ideas:**
+- Portfolio website  
+- Product landing page  
+- College event page  
+- Dashboard UI  
+- Startup homepage  
+
+---
+
+### 📁 Recommended Folder Structure  
+
+```bash
+src/
+│
+├── components/
+│   ├── Navbar.jsx
+│   ├── Footer.jsx
+│   ├── HeroSection.jsx
+│   └── CardComponent.jsx
+│
+├── pages/
+│   ├── Home.jsx
+│
+├── App.jsx
+├── main.jsx
+└── index.css
+```
 
 <div align="center">
 
