@@ -384,6 +384,15 @@ src/
 > **Viva:** Will be conducted in the upcoming classes and will be conveyed prior to one class 
 
 ---
+### 📝 Google Form
+
+Please submit your project details using the following link:
+
+<div align="center">
+  <a href="https://forms.gle/aUdYcz85aJ6YkBVVA">
+    <img src="https://img.shields.io/badge/Submit%20to%20Google%20Form-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Submit to Google Form" />
+  </a>
+</div>
 
 ### 📌 Assessment Topic  
 
