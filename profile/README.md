@@ -453,7 +453,7 @@ src/
 
 > ⚠️  
 > **Deadline:** 20 February 2026  
-> **Viva:** Will be conducted in the upcoming classes from today onwards
+
 
 ### 📝 Google Form
 
