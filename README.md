@@ -6,16 +6,20 @@
 </div>
 
 ---
-
 ## 📑 Table of Contents
 
 - [📖 Course Materials](#-course-materials)
 - [🎯 Assignment Structure & Grading](#-assignment-structure--grading)
 - [📤 Submission](#-submission)
-  - [📝 Google Form](#-google-form)
   - [🎥 Demo Video](#-demo-video)
   - [📋 Requirements](#-requirements)
+  - [📋 Project Submission Guidelines](#project-submission-guidelines)
 - [🧪 Experiment Guides](#-experiment-1-guides)
+  - [🧪 Experiment 1 Guides](#-experiment-1-guides)
+  - [🧪 Experiment 2 Guides](#-experiment-2-guides)
+  - [🧪 Experiment 3 Guides](#-experiment-3-guides)
+  - [🧪 Experiment 4 Guides](#-experiment-4-guides)
+
 
 ---
 
@@ -36,21 +40,7 @@ All source materials for the course are available at: <a href="https://github.co
 | Conduct | 15 |
 | MaxMarks | 30 |
 
----
 
-## 📤 Submission
-
-### 📝 Google Form
-
-Please submit your project details using the following link:
-
-<div align="center">
-  <a href="https://forms.gle/3Cac7xx1GJdnwHNz6">
-    <img src="https://img.shields.io/badge/Submit%20to%20Google%20Form-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Submit to Google Form" />
-  </a>
-</div>
-
----
 
 ### 🎥 Demo Video
 
@@ -61,6 +51,24 @@ Please submit your project details using the following link:
 </div>
 
 ---
+## Project Submission Guidelines
+
+## 1. Repository Structure & Format 📂
+- Ensure that the **repository name** and **structure** match the example shown in the reference image provided.
+
+## 2. Deployment Link 🌐
+- Please **format the deployment link** correctly. If you're facing any issues with this, refer to the provided reference for changing the link format.
+
+## 3. Exclude `node_modules` ❌
+- Do **not** include the **`node_modules`** folder in the zip file. This is important for clean submissions and avoids unnecessary bloat.
+
+## 4. Update README 📝
+- Make sure your **README** is up-to-date and provides clear information about the project.
+- Include a **folder** within the repository to store **screenshots** of the various web pages created for the project. Ideally, **2-3 screenshots** are sufficient.
+
+## 5. Authentic Submission ✅
+- Avoid making **fake GitHub submissions**. Ensure that the repository is legitimate, with relevant files and proper project documentation.
+
 
 ### 📋 Requirements
 
@@ -182,6 +190,22 @@ Create a comprehensive README equivalent to your practical file:
 > [!IMPORTANT]
 > **Deadline:** 22 January 2026
 
+---
+
+## 📤 Submission
+
+### 📝 Google Form
+
+Please submit your project details using the following link:
+
+<div align="center">
+  <a href="https://forms.gle/3Cac7xx1GJdnwHNz6">
+    <img src="https://img.shields.io/badge/Submit%20to%20Google%20Form-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Submit to Google Form" />
+  </a>
+</div>
+
+---
+
 ### 🛠️ Installation and Setup
 
 #### Step 1: Install Git
@@ -252,12 +276,307 @@ Set-ExecutionPolicy Unrestricted -Scope CurrentUser
 - `-Scope CurrentUser` — Applies this policy only to the current user, not system-wide
 
 
+## 🧪 Experiment 2 Guides  
 
+> ❗
+> **Deadline:** 4 February 2026  
+> **Viva:** Will be conducted in the upcoming classes from today onwards 
 
+### 📝 Google Form
 
+Please submit your project details using the following link:
 
 <div align="center">
-
-[⬆ Back to Top](#-course-experiments-guide)
-
+  <a href="https://forms.gle/wiF7sEw1qocrrEUh9">
+    <img src="https://img.shields.io/badge/Submit%20to%20Google%20Form-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Submit to Google Form" />
+  </a>
 </div>
+
+---
+
+### 🚨 Important Instructions
+
+1. **Please Check the Folder Structure Before Pushing to GitHub**  
+   Ensure that your project follows the recommended folder structure as provided in the guides. Incorrect folder structure may lead to issues when reviewing or deploying your project.
+
+2. **Format Deployment Link as Provided in Experiment 1 Guide**  
+   When deploying your project, make sure your deployment link follows the naming convention as shown in the **Experiment 1 Guide**. For example:  
+   `{uid}-{experiment-part}-{name}.vercel.app`  
+   Ensure that the link is formatted correctly to avoid submission errors.
+--
+
+### 📌 Assessment Topic  
+
+Design a **modern, sleek, and visually appealing web page** using UI component libraries.
+
+You must use **any one or a combination** of the following:
+- **Bootstrap**
+- **Material UI (MUI)**
+
+---
+
+### 🎯 Objective  
+
+- Learn component-based UI design  
+- Understand folder structuring in React  
+- Build a meaningful, real-world webpage  
+- Apply modern UI/UX principles  
+
+---
+
+### 🧩 Project Requirements  
+
+#### ✅ UI & Design  
+- Clean and modern layout  
+- Proper spacing, typography, and colors  
+- Responsive design (mobile + desktop)  
+
+#### ✅ Functionality  
+- Page should be meaningful, not random  
+
+**Example ideas:**
+- Portfolio website  
+- Product landing page  
+- College event page  
+- Dashboard UI  
+- Startup homepage  
+
+---
+
+### 📁 Recommended Folder Structure  
+
+```bash
+src/
+│
+├── components/
+│   ├── Navbar.jsx
+│   ├── Footer.jsx
+│   ├── HeroSection.jsx
+│   └── CardComponent.jsx
+│
+├── pages/
+│   ├── Home.jsx
+│
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+### 📚 Library Installation & Setup
+
+#### 1. **React Setup**
+- Run `npm create vite@latest` to create a new React project choose framework.
+- Navigate into the project folder using `cd your-project-name`.
+- Start the React app by running `npm start`.
+
+#### 2. **Bootstrap Setup**
+- Run `npm install react-bootstrap bootstrap` to install Bootstrap into your project.
+- In your **main.jsx**  file, import the Bootstrap CSS by adding:
+  `import 'bootstrap/dist/css/bootstrap.min.css';`  
+  This will apply Bootstrap's styles globally across your project.
+
+#### 3. **Material UI (MUI) Setup**
+- Run `npm install @mui/material @emotion/react @emotion/styled` to install Material UI.
+- Now, you can start using Material UI components like buttons, cards, etc., in your project by importing them into your React components.
+
+## 🧪 Experiment 3 Guides  
+
+> ⚠️ **Deadline:** 11 February 2026  
+> **Viva:** Will be conducted in the upcoming classes and will be conveyed prior to one class 
+
+---
+### 📝 Google Form
+
+Please submit your project details using the following link:
+
+<div align="center">
+  <a href="https://forms.gle/aUdYcz85aJ6YkBVVA">
+    <img src="https://img.shields.io/badge/Submit%20to%20Google%20Form-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Submit to Google Form" />
+  </a>
+</div>
+
+### 📌 Assessment Topic  
+
+This is an **extension of Experiment 2**. Create **one more webpage** related to your previously chosen design, topic, or theme and build upon it.
+
+You need to:
+- Choose a second page that fits with your first page.
+- **Use React Router** to navigate between the pages.
+
+---
+
+### 🎯 Objective  
+
+- Understand the use of **React Router**  
+- Create **multiple pages** in a React application  
+- Extend the webpage to include more content and structure  
+
+---
+
+### 🧩 Project Requirements  
+
+#### ✅ UI & Design  
+- Maintain **consistent design** with the first page  
+- Ensure **clean UI/UX** across pages  
+- Use **React Router** for page navigation  
+
+#### ✅ Functionality  
+- Create a second page that is related to your initial project  
+- Navigate between the pages using **React Router**  
+- The second page should provide more **information or functionality** based on your theme  
+
+**Example ideas:**
+- **Portfolio website** → Add a **Projects** page  
+- **Product landing page** → Add a **Contact** or **Pricing** page  
+- **College event page** → Add an **RSVP** or **Event Details** page  
+- **Dashboard UI** → Add an **Analytics** or **Settings** page  
+
+---
+
+### 📁 Recommended Folder Structure  
+
+```bash
+src/
+│
+├── components/
+│   ├── Navbar.jsx
+│   ├── Footer.jsx
+│   ├── HeroSection.jsx
+│   └── CardComponent.jsx
+│
+├── pages/
+│   ├── Home.jsx
+│   ├── Projects.jsx     # New page for Experiment 3
+│   └── Contact.jsx      # New page for Experiment 3
+```
+
+## 🧪 Experiment 4 Guides  
+
+> ⚠️  
+> **Deadline:** 20 February 2026  
+> **Viva:** Will be conducted in the upcoming classes from today onwards
+
+### 📝 Google Form
+
+Please submit your project details using the following link:
+
+<div align="center">
+  <a href="https://forms.gle/CncLobN4a4Ny7k228">
+    <img src="https://img.shields.io/badge/Submit%20to%20Google%20Form-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Submit to Google Form" />
+  </a>
+</div>
+
+---
+
+### 🚨 Important Instructions
+
+1. **This is an Extension of Experiment 3**  
+   You must update your Experiment 3 project (multi-page + React Router) and add the required Experiment 4 features.
+
+2. **Please Check the Folder Structure Before Pushing to GitHub**  
+   Ensure your project follows the recommended folder structure. Incorrect structure may lead to issues in review or deployment.
+
+3. **Format Deployment Link as Provided in Experiment 1 Guide**  
+   `{uid}-{experiment-part}-{name}.vercel.app`  
+   Example: `24bda70021-4-navkaran-singh.vercel.app`
+
+4. **Exclude `node_modules`**  
+   Do not include `node_modules` in the zip file.
+
+5. **Update README.md**  
+   Mention Experiment 4 changes clearly and add 2–3 screenshots in a `/screenshots` folder.
+
+---
+
+### 📌 Assessment Topic  
+
+Enhance your existing **Experiment 3** React project by implementing:
+
+- **useContext** (global state management)
+- **useReducer** (structured state updates)
+- **useMemo** (performance optimization)
+- Add **one new page** connected using **React Router**
+
+---
+
+### 🎯 Objective  
+
+- Understand global state using **Context API**  
+- Manage complex state transitions using **useReducer**  
+- Optimize derived calculations using **useMemo**  
+- Extend a multi-page React project while maintaining consistent UI/UX  
+
+---
+
+### 🧩 Project Requirements  
+
+#### ✅ UI & Design  
+- Maintain consistent design from Experiment 3  
+- Clean and modern layout  
+- Proper spacing, typography, and colors  
+- Responsive design (mobile + desktop)
+
+#### ✅ Functionality (Must Include All)
+1. **React Router (Already from Exp 3, must remain)**
+   - At least **3 total pages** after Experiment 4 update  
+   - Example: `Home`, `Projects`, `Analytics`
+
+2. **useContext**
+   - Create a global context provider and wrap the app
+   - Use context in **at least 2 components**
+   - Context must store meaningful global state such as:
+     - theme (light/dark), OR
+     - user profile (mock), OR
+     - favorites/cart/bookmarks
+
+3. **useReducer**
+   - Implement a reducer for meaningful state management
+   - Must include **minimum 3 actions**
+   - Example features:
+     - cart (add/remove/update qty)
+     - favorites (add/remove/clear)
+     - tasks (add/toggle/delete)
+
+4. **useMemo**
+   - Use `useMemo` to optimize derived data computation
+   - Example:
+     - total price calculation
+     - filtered + searched list
+     - analytics summary counts
+
+5. **New Page (Experiment 4 Page)**
+   - Add one page that demonstrates reducer + memo + context usage
+   - Example pages:
+     - Portfolio → `Skills` / `Experience`
+     - Product site → `Cart` / `Pricing`
+     - Event site → `RSVP` / `Schedule`
+     - Dashboard → `Analytics` / `Reports`
+
+---
+
+### 📁 Recommended Folder Structure  
+
+```bash
+src/
+│
+├── components/
+│   ├── Navbar.jsx
+│   ├── Footer.jsx
+│   ├── HeroSection.jsx
+│   ├── CardComponent.jsx
+│   ├── ThemeToggle.jsx
+│   └── FilterBar.jsx
+│
+├── context/
+│   └── AppContext.jsx
+│
+├── reducer/
+│   └── appReducer.js
+│
+├── pages/
+│   ├── Home.jsx
+│   ├── Projects.jsx / Contact.jsx   # From Experiment 3
+│   └── Analytics.jsx / Cart.jsx / RSVP.jsx  # New page for Experiment 4
+│
+├── App.jsx
+├── main.jsx
+└── index.css
