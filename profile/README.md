@@ -18,7 +18,7 @@
   - [🧪 Experiment 1 Guides](#-experiment-1-guides)
   - [🧪 Experiment 2 Guides](#-experiment-2-guides)
   - [🧪 Experiment 3 Guides](#-experiment-3-guides)
-- [📖 Viva Question](#viva-questions)
+  - [🧪 Experiment 4 Guides](#-experiment-4-guides)
 
 
 ---
@@ -449,54 +449,134 @@ src/
 │   └── Contact.jsx      # New page for Experiment 3
 ```
 
-# Viva Questions
+## 🧪 Experiment 4 Guides  
 
-## Table of Contents
+> ⚠️  
+> **Deadline:** 20 February 2026  
+> **Viva:** Will be conducted in the upcoming classes from today onwards
 
-1. [Section-A](#section-a)
-    - Q1: Differentiate between global state and local state in React.
-    - Q2: Highlight the advantages of using design patterns in frontend development.
-    - Q3: Compare global state and local state in React.
-    - Q4: Discuss the importance of optimizing performance in frontend applications.
-    - Q5: Explain the significance of component libraries in UI design.
-    - Q6: Describe the structure and workflow of single-page applications.
-    - Q7: Explain the design and operation of Single Page Applications.
-    - Q8: Outline the frontend-backend communication flow in SPA architecture.
-    - Q9: Define the concept of reusable UI components.
-    - Q10: Explain how theme switching works in a React application.
-    - Q11: Describe the use of Material UI components to build a responsive login form.
-    - Q12: Provide an overview of how routing is implemented in a single-page application.
-    - Q13: Explain the concept of code splitting in React applications.
-    - Q14: Summarize the significance of Material UI in modern frontend development.
-    - Q15: Demonstrate how to implement code splitting using React.lazy().
-    - Q16: Define lazy loading as a technique for frontend performance optimization.
-    - Q17: Identify the core features of a Single Page Application.
-    - Q18: Explain the purpose of the Context API in React.
-    - Q19: Define Redux and its role in state management.
-    - Q20: List the popular UI component libraries used in modern frontend development.
-    - Q21: Define a Single Page Application (SPA).
-    - Q22: Explain how to create a Redux store with actions and reducers.
+### 📝 Google Form
 
-2. [Section-B](#section-b)
-    - Q23: Compare various routing strategies for Single Page Applications (client-side, server-side, and hybrid), and discuss the trade-offs and appropriate use cases for each.
-    - Q24: Analyze common component design patterns such as Container–Presentational, Higher-Order Components, and Render Props, and explain when to use each pattern.
-    - Q25: Demonstrate how to build a responsive navigation bar using Material UI components, applying correct styling and breakpoint configurations.
-    - Q26: Compare Material UI, Ant Design, and Bootstrap, highlighting their features, customization options, and performance implications.
-    - Q27: Discuss the benefits of Single Page Applications over traditional multi-page applications, focusing on rendering performance and user experience with suitable examples.
-    - Q28: Analyze React’s rendering behavior and issues with re-rendering. Compare optimization techniques such as useMemo, useCallback, and React.memo with examples.
-    - Q29: Illustrate the Redux state lifecycle and data flow. Diagram the relationship between actions, reducers, the store, and components.
-    - Q30: Demonstrate how to create a React component that implements lazy loading for images, including loading indicators to improve performance.
-    - Q31: Design a structured Single Page Application (SPA) architecture for a blog website, defining component hierarchy and routing configuration.
-    - Q32: Compare Redux Toolkit and the Context API for state management. Provide use case scenarios for when each approach is most suitable.
-    - Q33: Explain various React performance optimization techniques, such as memoization, lazy loading, and code splitting, and analyze their effects on application performance.
-    - Q34: Implement a simple Context API setup to manage user authentication state across components. Demonstrate the use of providers and consumers.
+Please submit your project details using the following link:
+
+<div align="center">
+  <a href="https://forms.gle/CncLobN4a4Ny7k228">
+    <img src="https://img.shields.io/badge/Submit%20to%20Google%20Form-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Submit to Google Form" />
+  </a>
+</div>
 
 ---
 
+### 🚨 Important Instructions
 
-<div align="center">
+1. **This is an Extension of Experiment 3**  
+   You must update your Experiment 3 project (multi-page + React Router) and add the required Experiment 4 features.
 
-[⬆ Back to Top](#-course-experiments-guide)
+2. **Please Check the Folder Structure Before Pushing to GitHub**  
+   Ensure your project follows the recommended folder structure. Incorrect structure may lead to issues in review or deployment.
 
-</div>
+3. **Format Deployment Link as Provided in Experiment 1 Guide**  
+   `{uid}-{experiment-part}-{name}.vercel.app`  
+   Example: `24bda70021-4-navkaran-singh.vercel.app`
 
+4. **Exclude `node_modules`**  
+   Do not include `node_modules` in the zip file.
+
+5. **Update README.md**  
+   Mention Experiment 4 changes clearly and add 2–3 screenshots in a `/screenshots` folder.
+
+---
+
+### 📌 Assessment Topic  
+
+Enhance your existing **Experiment 3** React project by implementing:
+
+- **useContext** (global state management)
+- **useReducer** (structured state updates)
+- **useMemo** (performance optimization)
+- Add **one new page** connected using **React Router**
+
+---
+
+### 🎯 Objective  
+
+- Understand global state using **Context API**  
+- Manage complex state transitions using **useReducer**  
+- Optimize derived calculations using **useMemo**  
+- Extend a multi-page React project while maintaining consistent UI/UX  
+
+---
+
+### 🧩 Project Requirements  
+
+#### ✅ UI & Design  
+- Maintain consistent design from Experiment 3  
+- Clean and modern layout  
+- Proper spacing, typography, and colors  
+- Responsive design (mobile + desktop)
+
+#### ✅ Functionality (Must Include All)
+1. **React Router (Already from Exp 3, must remain)**
+   - At least **3 total pages** after Experiment 4 update  
+   - Example: `Home`, `Projects`, `Analytics`
+
+2. **useContext**
+   - Create a global context provider and wrap the app
+   - Use context in **at least 2 components**
+   - Context must store meaningful global state such as:
+     - theme (light/dark), OR
+     - user profile (mock), OR
+     - favorites/cart/bookmarks
+
+3. **useReducer**
+   - Implement a reducer for meaningful state management
+   - Must include **minimum 3 actions**
+   - Example features:
+     - cart (add/remove/update qty)
+     - favorites (add/remove/clear)
+     - tasks (add/toggle/delete)
+
+4. **useMemo**
+   - Use `useMemo` to optimize derived data computation
+   - Example:
+     - total price calculation
+     - filtered + searched list
+     - analytics summary counts
+
+5. **New Page (Experiment 4 Page)**
+   - Add one page that demonstrates reducer + memo + context usage
+   - Example pages:
+     - Portfolio → `Skills` / `Experience`
+     - Product site → `Cart` / `Pricing`
+     - Event site → `RSVP` / `Schedule`
+     - Dashboard → `Analytics` / `Reports`
+
+---
+
+### 📁 Recommended Folder Structure  
+
+```bash
+src/
+│
+├── components/
+│   ├── Navbar.jsx
+│   ├── Footer.jsx
+│   ├── HeroSection.jsx
+│   ├── CardComponent.jsx
+│   ├── ThemeToggle.jsx
+│   └── FilterBar.jsx
+│
+├── context/
+│   └── AppContext.jsx
+│
+├── reducer/
+│   └── appReducer.js
+│
+├── pages/
+│   ├── Home.jsx
+│   ├── Projects.jsx / Contact.jsx   # From Experiment 3
+│   └── Analytics.jsx / Cart.jsx / RSVP.jsx  # New page for Experiment 4
+│
+├── App.jsx
+├── main.jsx
+└── index.css
