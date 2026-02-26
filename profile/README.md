@@ -19,6 +19,7 @@
   - [🧪 Experiment 2 Guides](#-experiment-2-guides)
   - [🧪 Experiment 3 Guides](#-experiment-3-guides)
   - [🧪 Experiment 4 Guides](#-experiment-4-guides)
+  - [🧪 Experiment 5 Guides](#-experiment-5-guides)
 
 
 ---
@@ -580,3 +581,227 @@ src/
 ├── App.jsx
 ├── main.jsx
 └── index.css
+```
+
+# 🧪 Experiment 5 Guides
+
+> ⚠️ **Deadline:** **28 February 2026**
+### **This is an Extension of Experiment 4**  
+
+---
+
+## 📝 Google Form
+
+Submit your project details using this link:
+
+<div align="center">
+  <a href="https://forms.gle/PZGGWEdcG4427KeV8">
+    <img src="https://img.shields.io/badge/Submit%20to%20Google%20Form-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Submit to Google Form" />
+  </a>
+</div>
+
+---
+
+## 🚨 Important Instructions
+
+1. **This is an Extension of Experiment 4**  
+   Update your **Experiment 4** project and add the required **Experiment 5** features.
+
+2. **Check Folder Structure Before Pushing to GitHub**  
+   Follow the recommended structure below. Incorrect structure may cause review/deployment issues.
+
+3. **Deployment Link Format (same as Experiment 1)**  
+   `{uid}-{experiment-part}-{name}.vercel.app`  
+   **Example:** `24bda70021-5-navkaran-singh.vercel.app`
+
+4. **Exclude `node_modules`**  
+   Do **NOT** include `node_modules` in the zip.
+
+5. **Update `README.md`**  
+   Clearly mention Experiment 5 changes and add **2–3 screenshots** inside a `/screenshots` folder.
+
+---
+
+## 📌 Assessment Topic
+
+Enhance your existing **Experiment 4** React project by implementing:
+
+- **Redux Toolkit** (state management) ✅ *(replaces useReducer)*
+- **useContext** (global state — theme/user/etc.)
+- **useMemo** (performance optimization)
+- Add **one new page** connected using **React Router**
+
+---
+
+## 🎯 Objective
+
+- Learn structured, scalable state management using **Redux Toolkit**
+- Use **Context API** for app-wide concerns (theme/auth/profile)
+- Optimize derived calculations using **useMemo**
+- Extend a multi-page React app while maintaining consistent UI/UX
+
+---
+
+## 🧩 Project Requirements
+
+### ✅ UI & Design
+- Maintain consistent design from Experiment 4
+- Clean and modern layout
+- Proper spacing, typography, and colors
+- Responsive design (mobile + desktop)
+
+---
+
+### ✅ Functionality (Must Include All)
+
+#### 1) **React Router (Must remain from Exp 3/4)**
+- Minimum **3 total pages**
+- Add **1 new page** for Experiment 5 (example: `Reports`, `Cart`, `Schedule`, `Pricing`, etc.)
+- Routes must work properly with Navbar links
+
+**Example Pages**
+- `Home`
+- `Projects` / `Contact` (from Exp 3)
+- `Analytics` (from Exp 4)
+- **NEW (Exp 5):** `Reports` / `Cart` / `Schedule` / `Pricing`
+
+> You can keep previous pages and just **add one new page** for Experiment 5.
+
+---
+
+#### 2) **useContext**
+- Create a global context provider and wrap the app
+- Use context in **at least 2 components**
+- Context must store meaningful global state such as:
+  - theme (light/dark), OR
+  - user profile (mock), OR
+  - language toggle / layout preference
+
+---
+
+#### 3) **Redux Toolkit (Replaces useReducer)**
+Implement Redux Toolkit for meaningful state management.
+
+✅ **Requirements**
+- Configure a Redux store using `configureStore`
+- Create at least **1 slice** using `createSlice`
+- Slice must include **minimum 3 actions** (reducers)
+
+✅ **Example Features (pick one)**
+- **cart:** `addItem`, `removeItem`, `updateQty`  
+- **favorites:** `addFavorite`, `removeFavorite`, `clearFavorites`  
+- **tasks:** `addTask`, `toggleTask`, `deleteTask`
+
+✅ **Redux must be used in UI**
+- Dispatch actions using `useDispatch`
+- Read state using `useSelector`
+- Use in **at least 2 components** (e.g., page + card component)
+
+---
+
+#### 4) **useMemo**
+Use `useMemo` to optimize derived computations based on Redux/Context state.
+
+✅ **Examples**
+- total cart price calculation
+- filtered + searched list
+- analytics summary counts (completed, pending, totals)
+
+> Your `useMemo` should depend on state and recompute only when dependencies change.
+
+---
+
+#### 5) **New Page (Experiment 5 Page)**
+Add one page that demonstrates:
+- Redux Toolkit state usage (selector + dispatch)
+- `useMemo` for derived data
+- Context usage (theme/user/etc.)
+
+**Examples**
+- Portfolio → `Pricing` / `Experience`
+- Product site → `Cart` / `Checkout`
+- Event site → `Schedule` / `RSVP`
+- Dashboard → `Reports` / `Insights`
+
+---
+
+## 📁 Recommended Folder Structure
+
+```bash
+src/
+│
+├── components/
+│   ├── Navbar.jsx
+│   ├── Footer.jsx
+│   ├── ThemeToggle.jsx
+│   ├── CardComponent.jsx
+│   └── FilterBar.jsx
+│
+├── context/
+│   └── AppContext.jsx
+│
+├── redux/
+│   ├── store.js
+│   └── slices/
+│       └── appSlice.js   # (or cartSlice.js / taskSlice.js etc.)
+│
+├── pages/
+│   ├── Home.jsx
+│   ├── Projects.jsx / Contact.jsx     # From Experiment 3
+│   ├── Analytics.jsx / Cart.jsx       # From Experiment 4
+│   └── Reports.jsx / Pricing.jsx      # ✅ New page for Experiment 5
+│
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+
+---
+
+## ✅ Setup Checklist (Submission Ready)
+
+- [ ] App runs without errors (`npm install` → `npm run dev`)
+- [ ] React Router works with at least **3 pages**
+- [ ] **Context Provider** wraps the app and is used in **2+ components**
+- [ ] **Redux Toolkit** store + slice created with **3+ actions**
+- [ ] Redux state is used in **2+ components**
+- [ ] `useMemo` used for derived data optimization
+- [ ] Added **1 new page** for Experiment 5 and linked via Router
+- [ ] README updated + `/screenshots` folder added (2–3 images)
+- [ ] Deployed on Vercel with proper naming format
+- [ ] `node_modules` excluded from zip
+
+---
+
+## 📤 What to Submit
+
+1. **GitHub Repository Link**
+2. **Vercel Deployment Link** (formatted correctly)
+3. **Google Form Submission** (above)
+
+---
+
+## 🧾 README Update Template (What to write in your repo)
+
+Add a short section like:
+
+- **Experiment 5 Updates**
+  - Implemented Redux Toolkit (`store`, `slice`, `actions`)
+  - Added new page: `__________`
+  - Added `useMemo` for `__________`
+  - Implemented Context for `__________`
+  - Added screenshots in `/screenshots`
+
+---
+
+### ✅ Example Screenshot Folder
+
+```
+screenshots/
+├── home.png
+├── new-page.png
+└── redux-feature.png
+```
+
+---
+
