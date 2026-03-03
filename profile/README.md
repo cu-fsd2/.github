@@ -585,7 +585,7 @@ src/
 
 # 🧪 Experiment 5 Guides
 
-> ⚠️ **Deadline:** **28 February 2026**
+> ⚠️ **Deadline:** **07 March 2026**
 ### **This is an Extension of Experiment 4**  
 
 ---
