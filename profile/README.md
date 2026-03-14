@@ -22,7 +22,7 @@
   - [🧪 Experiment 2 Guides](#-experiment-2-guides)
   - [🧪 Experiment 1 Guides](#-experiment-1-guides)
   - [🧪 MST Experiment Guides](#-mst-experiment-guides)
-- [Viva Questions](#viva-questions)
+- [Viva Questions for MST Practicals](#viva-questions)
 
 
 ---
