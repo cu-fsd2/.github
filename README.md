@@ -1072,5 +1072,3 @@ Please submit your project details using the following link:
 5. Evaluate responsive UI frameworks for ensuring cross-device compatibility.
 
 6. Create a comprehensive frontend solution that integrates SPA concepts, state management, form handling, and responsive design.
-
-
