@@ -21,6 +21,7 @@
   - [🧪 Experiment 4 Guides](#-experiment-4-guides)
   - [🧪 Experiment 5 Guides](#-experiment-5-guides)
    - [🧪 MST Experiment Guides](#-mst-experiment-guides)
+- [Viva Questions](#viva-questions)
 
 
 ---
@@ -820,5 +821,100 @@ Please submit your project details using the following link:
     <img src="https://img.shields.io/badge/Submit%20to%20Google%20Form-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Submit to Google Form" />
   </a>
 </div>
+
+## Viva Questions
+
+### Short Questions – 2 Marks
+
+1. Explain why client-side validation is important in web applications.
+
+2. What is meant by a Single Page Application (SPA)?
+
+3. Identify commonly used HTTP request methods when interacting with APIs.
+
+4. Compare the usage of Redux and the Context API for managing application state.
+
+5. Outline the fundamental principles behind responsive user interface design.
+
+6. Mention two benefits of using Axios for making HTTP requests.
+
+7. Explain how the Fetch API performs network requests in web applications.
+
+8. Distinguish between controlled components and uncontrolled components in form handling.
+
+9. List the main features that define Single Page Applications.
+
+10. Describe the function of reducers within a Redux-based application.
+
+11. What are the typical validation rules applied to web forms?
+
+12. Describe the role that APIs play within Single Page Applications.
+
+13. Name the core elements involved in the Redux architecture.
+
+14. Explain how errors should be managed while consuming APIs.
+
+15. What is the purpose of using the Context API in React applications?
+
+16. Describe how the Fetch API operates to retrieve data from servers.
+
+17. Explain the concept of managing state in frontend development.
+
+18. Identify UI components that are appropriate for building responsive forms.
+
+19. Categorize application state into local state and global state.
+
+20. Point out the advantages of making asynchronous API requests.
+
+21. Explain the concept of breakpoints used in responsive layouts.
+
+22. Differentiate Fetch and Axios in terms of handling HTTP requests.
+
+23. Recognize the benefits of managing application state through a centralized store.
+
+24. Illustrate how data moves through a Single Page Application.
+
+25. Identify common strategies used to build responsive page layouts.
+
+### Medium length Questions – 5 Marks
+
+1. Analyze the workflow of a Single Page Application with suitable illustrations.
+
+2. Demonstrate how Fetch or Axios is used to consume APIs in a frontend application.
+
+3. Show how state management can be done using Redux for a given application scenario.
+
+4. Compare and contrast Redux and Context API with their respective use cases.
+
+5. Explain the process of form handling and validation in modern frontend frameworks.
+
+6. Apply responsive UI design principles to make an application adaptable across different devices.
+
+7. Discuss the consequences of improper state management on application performance.
+
+8. Show how REST APIs can be integrated into a Single Page Application.
+
+9. Compare various form validation strategies for client-side applications.
+
+10. Analyze the challenges developers face when integrating responsive UI elements.
+
+11. Implement Context API for managing the global state in a sample use case.
+
+12. Evaluate how API error handling techniques work in frontend applications.
+
+
+### Long Questions – 10 Marks
+
+1. Design a complete architecture for a Single Page Application, incorporating API consumption and state management.
+
+2. Evaluate the effectiveness of using Redux versus Context API for managing state in large-scale applications.
+
+3. Design and validate complex forms, considering responsive UI principles.
+
+4. Analyze and optimize strategies for API consumption to enhance the performance of high-performance SPAs.
+
+5. Evaluate responsive UI frameworks for ensuring cross-device compatibility.
+
+6. Create a comprehensive frontend solution that integrates SPA concepts, state management, form handling, and responsive design.
 
 
