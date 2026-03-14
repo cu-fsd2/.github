@@ -15,12 +15,14 @@
   - [📋 Requirements](#-requirements)
   - [📋 Project Submission Guidelines](#project-submission-guidelines)
 - [🧪 Experiment Guides](#-experiment-1-guides)
-  - [🧪 Experiment 1 Guides](#-experiment-1-guides)
-  - [🧪 Experiment 2 Guides](#-experiment-2-guides)
-  - [🧪 Experiment 3 Guides](#-experiment-3-guides)
-  - [🧪 Experiment 4 Guides](#-experiment-4-guides)
+  - [🧪 Experiment 6 Guides](#-experiment-6-guides)
   - [🧪 Experiment 5 Guides](#-experiment-5-guides)
-   - [🧪 MST Experiment Guides](#-mst-experiment-guides)
+  - [🧪 Experiment 4 Guides](#-experiment-4-guides)
+  - [🧪 Experiment 3 Guides](#-experiment-3-guides)
+  - [🧪 Experiment 2 Guides](#-experiment-2-guides)
+  - [🧪 Experiment 1 Guides](#-experiment-1-guides)
+
+  - [🧪 MST Experiment Guides](#-mst-experiment-guides)
 - [Viva Questions](#viva-questions)
 
 
@@ -186,6 +188,161 @@ Create a comprehensive README equivalent to your practical file:
 - ✅ Add detailed explanations
 - ✅ Document your implementation approach
 - ✅ Include screenshots or demos (if applicable)
+
+
+## 🧪 Experiment 6 Guides
+
+## 🚨 Important Instructions
+- **Deadline**: **17 March 2026**
+
+### 📝 Google Form
+
+Please submit your project details using the following link:
+
+<div align="center">
+  <a href="https://forms.gle/3Cac7xx1GJdnwHNz6">
+    <img src="https://img.shields.io/badge/Submit%20to%20Google%20Form-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Submit to Google Form" />
+  </a>
+</div>
+
+---
+
+## 📌 Assessment Topic
+Implement **JWT Authentication** in your backend. The system should support user login, session management, and generate a JWT token for authenticated sessions.
+
+You must **demonstrate** the functionality of the JWT token by showcasing how authentication works with **Postman**.
+
+### **Submission Requirements:**
+1. **Backend Implementation**:
+   - Implement JWT authentication in the backend using springboot framework.
+   - **Mandatory**: Screenshots showing the following:
+     - Successful **login request** and receiving the JWT token.
+     - **Access protected routes** by providing the JWT token.
+     - **Logout process** (optional but recommended to show token invalidation).
+
+   **At least 3 screenshots** are required. You will be marked based on these screenshots and the **README** explaining the implementation.
+
+2. **Project Structure**:
+   - Follow the **recommended folder structure** when pushing to GitHub.
+   - Screenshots and relevant documents should be stored in an appropriate folder.
+
+   Example of folder structure:
+   ```
+   src/
+   ├── controllers/
+   │   └── authController.js
+   ├── middleware/
+   │   └── authMiddleware.js
+   ├── routes/
+   │   └── authRoutes.js
+   ├── models/
+   │   └── userModel.js
+   ├── server.js
+   └── .env
+   ```
+
+3. **Postman Screenshots**:
+   - Screenshots should show:
+     - **Login request** with username and password.
+     - **JWT Token received** upon successful authentication.
+     - **Access to protected route** using the token in the authorization header.
+
+
+## 🎯 Objective
+- Implement **JWT Authentication** in a backend application.
+- Manage user sessions using JWT.
+- Understand how to use **Postman** for testing authentication processes.
+- Learn about **session management** and **token validation** in web applications.
+
+---
+
+## 🧩 Project Requirements
+
+### **Backend Functionality**:
+- **Login**: Authenticate users using username and password, then generate and send a JWT token.
+- **Protected Routes**: Secure certain routes using the JWT token.
+- **Session Handling**: Ensure the JWT token is valid and handle user logout (token invalidation).
+
+### **Postman Testing**:
+- Use **Postman** to demonstrate the following steps:
+  1. Send a login request with user credentials and get a JWT token.
+  2. Use the token to access a protected route.
+  3. Optional: Show token invalidation or logout process.
+
+---
+
+## 📁 Recommended Folder Structure
+Ensure your backend is structured appropriately for easy maintenance and deployment. Below is a suggested structure:
+
+```
+src/
+├── controllers/
+│   ├── authController.js  # Handles login, logout, token generation
+├── middleware/
+│   └── authMiddleware.js  # Verifies JWT tokens for protected routes
+├── models/
+│   └── userModel.js  # Defines user schema for authentication
+├── routes/
+│   └── authRoutes.js  # Routes for login and protected endpoints
+├── server.js  # Main server file to configure routes and start server
+└── .env  # Environment variables (DB, JWT_SECRET, etc.)
+``` id="ch2pqq"
+
+---
+
+## 📚 Library Installation & Setup
+
+1. **Backend Setup**:
+   - Create a new Spring Boot project with **Maven** using [Spring Initializr](https://start.spring.io/).
+   - Add dependencies: **Spring Web**, **Spring Security**, **Spring Data JPA**, **JWT**, and your database (e.g., H2).
+   
+2. **Add Maven Dependencies**:
+   In `pom.xml`, add:
+   ```xml
+   <dependency>
+       <groupId>io.jsonwebtoken</groupId>
+       <artifactId>jjwt</artifactId>
+       <version>0.11.2</version>
+   </dependency>
+   <dependency>
+       <groupId>org.springframework.boot</groupId>
+       <artifactId>spring-boot-starter-security</artifactId>
+   </dependency>
+
+3. **API Routes**:
+   - **Login Route**:
+     - Send a POST request with the user's username and password.
+     - On successful login, return the JWT token.
+   - **Protected Route**:
+     - Secure routes using JWT authentication middleware.
+     - The JWT token should be included in the Authorization header for protected routes.
+
+---
+
+## **Example of Postman Request**
+### 1. **Login Request (POST /login)**
+- **URL**: `http://localhost:5000/login`
+- **Body** (raw, JSON):
+  ```json
+  {
+    "username": "user123",
+    "password": "password123"
+  }
+  ```
+- **Response**:
+  ```json
+  {
+    "token": "your_jwt_token_here"
+  }
+  ```
+
+### 2. **Access Protected Route (GET /protected)**
+- **URL**: `http://localhost:5000/protected`
+- **Headers**:
+  ```
+  Authorization: Bearer your_jwt_token_here
+  ```
+
 
 
 ## 🧪 Experiment 1 Guides
