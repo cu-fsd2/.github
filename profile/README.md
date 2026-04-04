@@ -15,6 +15,7 @@
   - [📋 Requirements](#-requirements)
   - [📋 Project Submission Guidelines](#project-submission-guidelines)
 - [🧪 Experiment Guides](#-experiment-1-guides)
+  - [🧪 Experiment 7 Guides](#-experiment-7-guides)
   - [🧪 Experiment 6 Guides](#-experiment-6-guides)
   - [🧪 Experiment 5 Guides](#-experiment-5-guides)
   - [🧪 Experiment 4 Guides](#-experiment-4-guides)
@@ -22,7 +23,6 @@
   - [🧪 Experiment 2 Guides](#-experiment-2-guides)
   - [🧪 Experiment 1 Guides](#-experiment-1-guides)
   - [🧪 MST Experiment Guides](#-mst-experiment-guides)
-- [Viva Questions for MST Practicals](#viva-questions)
 
 ---
 
@@ -186,6 +186,400 @@ Create a comprehensive README equivalent to your practical file:
 - ✅ Add detailed explanations
 - ✅ Document your implementation approach
 - ✅ Include screenshots or demos (if applicable)
+
+# 🧪 Experiment 7 Guides
+
+## 🚨 Important Instructions
+- **Deadline**: **07 April 2026, Evening**
+
+### 📝 Google Form
+
+Please submit your project details using the following link:
+
+<div align="center">
+  <a href="https://forms.gle/jSNYGcN7d5kmBSpZ9">
+    <img src="https://img.shields.io/badge/Submit%20to%20Google%20Form-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Submit to Google Form" />
+  </a>
+</div>
+
+---
+
+## 📌 Assessment Topic
+Implement **Role-Based Authorization (RBAC)** in your backend using **Spring Boot**.
+
+Your application must support:
+- **User authentication** using Spring Security
+- **Role-based access control** such as `ADMIN` and `USER`
+- **Protected APIs** that can only be accessed based on assigned roles
+- Testing and demonstration of authorization using **Postman**
+
+You must **demonstrate** how authorization works by showing that:
+- a normal user can access only permitted endpoints
+- an admin can access admin-only endpoints
+- unauthorized or forbidden requests are blocked correctly
+
+---
+
+## ✅ Submission Requirements
+
+### 1. Backend Implementation
+Implement **role-based authorization** in Spring Boot.
+
+Your backend should include:
+- User login/authentication
+- Role assignment for users
+- Endpoint protection based on roles
+- Proper HTTP responses for unauthorized and forbidden access
+
+### 2. Mandatory Screenshots
+You must include **at least 4 screenshots** in your project.
+
+Required screenshots:
+1. **Login request** with valid credentials
+2. **Successful response** after login (or successful access to secured endpoint)
+3. **USER role accessing a user endpoint successfully**
+4. **USER role denied access to ADMIN endpoint** or **ADMIN role successfully accessing ADMIN endpoint**
+
+Recommended extra screenshots:
+- Invalid login attempt
+- Request without token returning `401 Unauthorized`
+- Access denied response returning `403 Forbidden`
+
+> You will be evaluated based on your implementation, screenshots, project structure, and the quality of your **README**.
+
+### 3. GitHub Project Structure
+Follow a clean and organized Spring Boot project structure. Keep screenshots and documentation in appropriate folders.
+
+---
+
+## 🎯 Objective
+By completing this experiment, you will learn how to:
+- Implement **authentication and authorization** in Spring Boot
+- Restrict API access using **roles**
+- Configure **Spring Security** for secured endpoints
+- Test protected APIs using **Postman**
+- Understand the difference between **401 Unauthorized** and **403 Forbidden**
+
+---
+
+## 🧩 Project Requirements
+
+### **Backend Functionality**
+Your application should support the following features:
+
+#### 1. Authentication
+- Authenticate users with username and password
+- Store users with roles such as `ROLE_USER` and `ROLE_ADMIN`
+- Use Spring Security for login/session handling or token-based access if implemented
+
+#### 2. Authorization
+- Create endpoints accessible by specific roles only
+- Example:
+  - `/api/public/**` → accessible to everyone
+  - `/api/user/**` → accessible to `USER` and `ADMIN`
+  - `/api/admin/**` → accessible to `ADMIN` only
+
+#### 3. Access Control Rules
+- If no authentication is provided, return **401 Unauthorized**
+- If authentication is valid but the role is insufficient, return **403 Forbidden**
+
+#### 4. Database / User Storage
+You may use:
+- H2 database
+- MySQL
+- PostgreSQL
+- In-memory user configuration for demo purpose
+
+However, using a database is preferred for better demonstration.
+
+---
+
+## 📁 Recommended Folder Structure
+Use a Spring Boot structure similar to the following:
+
+```text
+src/
+├── main/
+│   ├── java/
+│   │   └── com/example/experiment7/
+│   │       ├── config/
+│   │       │   └── SecurityConfig.java
+│   │       ├── controller/
+│   │       │   ├── AuthController.java
+│   │       │   ├── UserController.java
+│   │       │   └── AdminController.java
+│   │       ├── dto/
+│   │       │   ├── LoginRequest.java
+│   │       │   └── LoginResponse.java
+│   │       ├── entity/
+│   │       │   ├── User.java
+│   │       │   └── Role.java
+│   │       ├── repository/
+│   │       │   └── UserRepository.java
+│   │       ├── service/
+│   │       │   ├── CustomUserDetailsService.java
+│   │       │   └── AuthService.java
+│   │       └── Experiment7Application.java
+│   └── resources/
+│       ├── application.properties
+│       └── data.sql
+├── test/
+└── pom.xml
+```
+
+You may also create a `screenshots/` folder in your repository:
+
+```text
+screenshots/
+├── 01-login-success.png
+├── 02-user-endpoint-success.png
+├── 03-admin-endpoint-success.png
+└── 04-access-denied.png
+```
+
+---
+
+## 📚 Library Installation & Setup
+
+### 1. Create Spring Boot Project
+Create a Spring Boot project using **Maven** from Spring Initializr.
+
+### 2. Add Required Dependencies
+Add these dependencies:
+- Spring Web
+- Spring Security
+- Spring Data JPA
+- H2 / MySQL Driver
+- Lombok (optional)
+
+### 3. Example `pom.xml` Dependencies
+
+```xml
+<dependencies>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-security</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>com.h2database</groupId>
+        <artifactId>h2</artifactId>
+        <scope>runtime</scope>
+    </dependency>
+
+    <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <optional>true</optional>
+    </dependency>
+
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <scope>test</scope>
+    </dependency>
+</dependencies>
+```
+
+---
+
+## 🔐 Role-Based Authorization Design
+
+### Example Roles
+- `ROLE_USER`
+- `ROLE_ADMIN`
+
+### Example Access Rules
+| Endpoint | Access Role |
+|----------|-------------|
+| `/api/public/hello` | Public |
+| `/api/user/profile` | USER, ADMIN |
+| `/api/admin/dashboard` | ADMIN only |
+
+### Example Security Rules in Spring Boot
+You may configure authorization using `SecurityFilterChain`:
+
+```java
+@Bean
+public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+    http
+        .csrf(csrf -> csrf.disable())
+        .authorizeHttpRequests(auth -> auth
+            .requestMatchers("/api/public/**").permitAll()
+            .requestMatchers("/api/user/**").hasAnyRole("USER", "ADMIN")
+            .requestMatchers("/api/admin/**").hasRole("ADMIN")
+            .anyRequest().authenticated()
+        )
+        .httpBasic(Customizer.withDefaults());
+
+    return http.build();
+}
+```
+
+---
+
+## 👤 Example Users for Testing
+You can create demo users in the database or in-memory.
+
+### Example
+| Username | Password | Role |
+|----------|----------|------|
+| `user1`  | `user123` | USER |
+| `admin1` | `admin123` | ADMIN |
+
+> If passwords are encoded using BCrypt, store them in encoded format.
+
+---
+
+## 🌐 Suggested API Endpoints
+
+### 1. Public Endpoint
+**GET** `/api/public/hello`
+
+Response:
+```json
+{
+  "message": "This is a public endpoint"
+}
+```
+
+### 2. User Endpoint
+**GET** `/api/user/profile`
+
+Accessible by:
+- USER
+- ADMIN
+
+Response:
+```json
+{
+  "message": "Welcome, authenticated user"
+}
+```
+
+### 3. Admin Endpoint
+**GET** `/api/admin/dashboard`
+
+Accessible by:
+- ADMIN only
+
+Response:
+```json
+{
+  "message": "Welcome, admin"
+}
+```
+
+---
+
+## 🧪 Postman Testing Guide
+Use Postman to verify authentication and authorization.
+
+### Case 1: Access Public Endpoint
+- **Method**: `GET`
+- **URL**: `http://localhost:8080/api/public/hello`
+- Expected result: Success without login
+
+### Case 2: Login / Authenticate
+Depending on your implementation, use either:
+- Spring Security default login/session
+- HTTP Basic Auth in Postman
+- Custom login endpoint
+
+If using HTTP Basic in Postman:
+- Go to **Authorization** tab
+- Select **Basic Auth**
+- Enter username and password
+
+### Case 3: USER Accessing User Endpoint
+- **Method**: `GET`
+- **URL**: `http://localhost:8080/api/user/profile`
+- **Auth**: Login as `user1`
+- Expected result: `200 OK`
+
+### Case 4: USER Accessing Admin Endpoint
+- **Method**: `GET`
+- **URL**: `http://localhost:8080/api/admin/dashboard`
+- **Auth**: Login as `user1`
+- Expected result: `403 Forbidden`
+
+### Case 5: ADMIN Accessing Admin Endpoint
+- **Method**: `GET`
+- **URL**: `http://localhost:8080/api/admin/dashboard`
+- **Auth**: Login as `admin1`
+- Expected result: `200 OK`
+
+### Case 6: No Authentication
+- Try accessing `/api/user/profile` without login
+- Expected result: `401 Unauthorized`
+
+---
+
+## 📸 Screenshot Checklist
+Include screenshots for the following:
+
+- [ ] Project folder structure
+- [ ] Database users/roles table or in-memory user config
+- [ ] Public endpoint response
+- [ ] USER login/authentication
+- [ ] USER accessing `/api/user/profile`
+- [ ] USER getting `403 Forbidden` on `/api/admin/dashboard`
+- [ ] ADMIN accessing `/api/admin/dashboard`
+
+At minimum, include the four required screenshots mentioned above.
+
+---
+
+## 🛠️ Implementation Steps
+
+### Step 1: Create Entity Classes
+Create `User` and optionally `Role` entities.
+
+Example fields for `User`:
+- `id`
+- `username`
+- `password`
+- `role`
+
+### Step 2: Create Repository
+Create `UserRepository` to fetch user details by username.
+
+### Step 3: Create Custom UserDetailsService
+Implement `UserDetailsService` to load user information from database.
+
+### Step 4: Configure Password Encoder
+Use BCrypt password encoder.
+
+```java
+@Bean
+public PasswordEncoder passwordEncoder() {
+    return new BCryptPasswordEncoder();
+}
+```
+
+### Step 5: Configure Security
+Set URL access rules using roles.
+
+### Step 6: Create Controllers
+Create:
+- `AuthController` (optional if custom login is used)
+- `UserController`
+- `AdminController`
+- `PublicController`
+
+### Step 7: Test in Postman
+Verify all success and failure cases.
+
 
 
 ## 🧪 Experiment 6 Guides
@@ -976,100 +1370,4 @@ Please submit your project details using the following link:
     <img src="https://img.shields.io/badge/Submit%20to%20Google%20Form-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Submit to Google Form" />
   </a>
 </div>
-
-## Viva Questions
-
-### Short Questions – 2 Marks
-
-1. Explain why client-side validation is important in web applications.
-
-2. What is meant by a Single Page Application (SPA)?
-
-3. Identify commonly used HTTP request methods when interacting with APIs.
-
-4. Compare the usage of Redux and the Context API for managing application state.
-
-5. Outline the fundamental principles behind responsive user interface design.
-
-6. Mention two benefits of using Axios for making HTTP requests.
-
-7. Explain how the Fetch API performs network requests in web applications.
-
-8. Distinguish between controlled components and uncontrolled components in form handling.
-
-9. List the main features that define Single Page Applications.
-
-10. Describe the function of reducers within a Redux-based application.
-
-11. What are the typical validation rules applied to web forms?
-
-12. Describe the role that APIs play within Single Page Applications.
-
-13. Name the core elements involved in the Redux architecture.
-
-14. Explain how errors should be managed while consuming APIs.
-
-15. What is the purpose of using the Context API in React applications?
-
-16. Describe how the Fetch API operates to retrieve data from servers.
-
-17. Explain the concept of managing state in frontend development.
-
-18. Identify UI components that are appropriate for building responsive forms.
-
-19. Categorize application state into local state and global state.
-
-20. Point out the advantages of making asynchronous API requests.
-
-21. Explain the concept of breakpoints used in responsive layouts.
-
-22. Differentiate Fetch and Axios in terms of handling HTTP requests.
-
-23. Recognize the benefits of managing application state through a centralized store.
-
-24. Illustrate how data moves through a Single Page Application.
-
-25. Identify common strategies used to build responsive page layouts.
-
-### Medium length Questions – 5 Marks
-
-1. Analyze the workflow of a Single Page Application with suitable illustrations.
-
-2. Demonstrate how Fetch or Axios is used to consume APIs in a frontend application.
-
-3. Show how state management can be done using Redux for a given application scenario.
-
-4. Compare and contrast Redux and Context API with their respective use cases.
-
-5. Explain the process of form handling and validation in modern frontend frameworks.
-
-6. Apply responsive UI design principles to make an application adaptable across different devices.
-
-7. Discuss the consequences of improper state management on application performance.
-
-8. Show how REST APIs can be integrated into a Single Page Application.
-
-9. Compare various form validation strategies for client-side applications.
-
-10. Analyze the challenges developers face when integrating responsive UI elements.
-
-11. Implement Context API for managing the global state in a sample use case.
-
-12. Evaluate how API error handling techniques work in frontend applications.
-
-
-### Long Questions – 10 Marks
-
-1. Design a complete architecture for a Single Page Application, incorporating API consumption and state management.
-
-2. Evaluate the effectiveness of using Redux versus Context API for managing state in large-scale applications.
-
-3. Design and validate complex forms, considering responsive UI principles.
-
-4. Analyze and optimize strategies for API consumption to enhance the performance of high-performance SPAs.
-
-5. Evaluate responsive UI frameworks for ensuring cross-device compatibility.
-
-6. Create a comprehensive frontend solution that integrates SPA concepts, state management, form handling, and responsive design.
-
 
