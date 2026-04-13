@@ -15,6 +15,8 @@
   - [📋 Requirements](#-requirements)
   - [📋 Project Submission Guidelines](#project-submission-guidelines)
 - [🧪 Experiment Guides](#-experiment-1-guides)
+  - [🧪 Experiment 9 Guides](#-experiment-9-guides)
+  - [🧪 Experiment 8 Guides](#-experiment-8-guides)
   - [🧪 Experiment 7 Guides](#-experiment-7-guides)
   - [🧪 Experiment 6 Guides](#-experiment-6-guides)
   - [🧪 Experiment 5 Guides](#-experiment-5-guides)
@@ -186,6 +188,514 @@ Create a comprehensive README equivalent to your practical file:
 - ✅ Add detailed explanations
 - ✅ Document your implementation approach
 - ✅ Include screenshots or demos (if applicable)
+
+# 🧪 Experiment 9 Guides
+
+## Frontend Integration with RBAC (React + Session-Based UI)
+
+- [🧪Based on Experiment 7](#-experiment-7-guides)
+
+This experiment extends Role-Based Authorization backend implemented
+earlier.
+
+## 🚨 Important Instructions
+- **Deadline**: **19 April 2026, Evening**
+
+### 📝 Google Form
+
+Please submit your project details using the following link:
+
+<div align="center">
+  <a href="https://forms.gle/TBFqkGe1WmkWeDMU6">
+    <img src="https://img.shields.io/badge/Submit%20to%20Google%20Form-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Submit to Google Form" />
+  </a>
+</div>
+
+---
+
+------------------------------------------------------------------------
+
+## 🎯 Objective
+
+-   Build a React frontend for RBAC APIs
+-   Use Bootstrap + Material UI for UI design
+-   Implement session-based authentication
+-   Restrict UI components based on roles (USER / ADMIN)
+-   Demonstrate role-based access from frontend
+
+------------------------------------------------------------------------
+
+## 🧩 Features to Implement
+
+### 1. Login Page
+
+-   Accept username & password
+-   Call backend authentication
+-   Store token/credentials in sessionStorage
+-   Redirect based on role:
+    -   USER → User Dashboard
+    -   ADMIN → Admin Dashboard
+
+------------------------------------------------------------------------
+
+### 2. Role-Based Dashboards
+
+#### USER Dashboard
+
+-   Access:
+    -   /api/user/profile
+-   Cannot access admin APIs
+
+#### ADMIN Dashboard
+
+-   Access:
+    -   /api/admin/dashboard
+-   Full access
+
+------------------------------------------------------------------------
+
+### 3. Role-Based UI Control
+
+-   Hide/show components based on role
+-   Example:
+    -   USER → cannot see admin button
+    -   ADMIN → sees all controls
+
+------------------------------------------------------------------------
+
+### 4. Logout
+
+    sessionStorage.clear();
+
+------------------------------------------------------------------------
+
+## 💻 Tech Stack
+
+-   React
+-   Bootstrap
+-   Material UI
+-   Axios / Fetch API
+
+------------------------------------------------------------------------
+
+## ⚙️ Installation
+
+``` bash
+npx create-react-app frontend
+cd frontend
+npm install axios bootstrap @mui/material @emotion/react @emotion/styled
+```
+
+------------------------------------------------------------------------
+
+## 🧱 React Implementation
+
+### 📄 Login.js
+
+``` jsx
+import React, { useState } from "react";
+import axios from "axios";
+
+function Login() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const login = async () => {
+    const res = await axios.get("http://localhost:8080/api/user/profile", {
+      auth: { username, password }
+    });
+
+    if (res.status === 200) {
+      sessionStorage.setItem("user", username);
+      sessionStorage.setItem("role", username.includes("admin") ? "ADMIN" : "USER");
+
+      if (username.includes("admin")) {
+        window.location.href = "/admin";
+      } else {
+        window.location.href = "/user";
+      }
+    }
+  };
+
+  return (
+    <div className="container mt-5">
+      <h2>Login</h2>
+      <input className="form-control" placeholder="Username" onChange={(e)=>setUsername(e.target.value)} /><br/>
+      <input className="form-control" type="password" placeholder="Password" onChange={(e)=>setPassword(e.target.value)} /><br/>
+      <button className="btn btn-primary" onClick={login}>Login</button>
+    </div>
+  );
+}
+
+export default Login;
+```
+
+------------------------------------------------------------------------
+
+### 📄 UserDashboard.js
+
+``` jsx
+import React from "react";
+import axios from "axios";
+
+function UserDashboard() {
+  const role = sessionStorage.getItem("role");
+
+  if (!role) window.location.href = "/";
+
+  const fetchData = async () => {
+    const res = await axios.get("http://localhost:8080/api/user/profile");
+    alert(res.data.message);
+  };
+
+  return (
+    <div className="container mt-5">
+      <h2>User Dashboard</h2>
+      <button className="btn btn-success" onClick={fetchData}>Get Profile</button>
+    </div>
+  );
+}
+
+export default UserDashboard;
+```
+
+------------------------------------------------------------------------
+
+### 📄 AdminDashboard.js
+
+``` jsx
+import React from "react";
+import axios from "axios";
+
+function AdminDashboard() {
+  const role = sessionStorage.getItem("role");
+
+  if (role !== "ADMIN") {
+    alert("Access Denied");
+    window.location.href = "/";
+  }
+
+  const fetchAdmin = async () => {
+    const res = await axios.get("http://localhost:8080/api/admin/dashboard");
+    alert(res.data.message);
+  };
+
+  return (
+    <div className="container mt-5">
+      <h2>Admin Dashboard</h2>
+      <button className="btn btn-danger" onClick={fetchAdmin}>Admin Data</button>
+    </div>
+  );
+}
+
+export default AdminDashboard;
+```
+
+------------------------------------------------------------------------
+
+## 🔐 Role-Based Restriction Logic
+
+-   USER → access only user endpoints
+-   ADMIN → access all endpoints
+-   Unauthorized → redirect or show error
+
+------------------------------------------------------------------------
+
+## 📸 Required Screenshots
+
+1.  Login UI
+2.  USER accessing user endpoint
+3.  USER denied access to admin endpoint
+4.  ADMIN accessing admin endpoint
+5.  Session storage showing role
+6.  Unauthorized access handling
+
+------------------------------------------------------------------------
+
+## 📁 Project Structure
+
+    frontend/
+    ├── src/
+    │   ├── components/
+    │   │   ├── Login.js
+    │   │   ├── UserDashboard.js
+    │   │   └── AdminDashboard.js
+
+------------------------------------------------------------------------
+
+## 📘 README Explanation
+
+-   React frontend integrates RBAC backend
+-   Role stored in sessionStorage
+-   UI changes based on role
+-   Secure API calls enforced
+
+------------------------------------------------------------------------
+
+## ✅ Summary
+
+This experiment demonstrates frontend implementation of role-based
+authorization using React, Bootstrap, and Material UI integrated with
+Spring Boot RBAC backend.
+
+
+# 🧪 Experiment 8 Guides
+
+## 🚨 Important Instructions
+- **Deadline**: **17 April 2026, Evening**
+
+### 📝 Google Form
+
+Please submit your project details using the following link:
+
+<div align="center">
+  <a href="https://forms.gle/6VJHyyCDvrzSUU2r6">
+    <img src="https://img.shields.io/badge/Submit%20to%20Google%20Form-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Submit to Google Form" />
+  </a>
+</div>
+
+---
+
+## Frontend Integration with JWT APIs (Session-Based UI)
+
+- [🧪Based on Experiment 6](#-experiment-6-guides)
+
+This experiment uses the backend APIs implemented earlier (login +
+protected routes).
+
+------------------------------------------------------------------------
+
+## 🎯 Objective
+
+-   Build a frontend UI that consumes JWT APIs\
+-   Implement session-based authentication (token stored per session)\
+-   Restrict access to pages based on login state\
+-   Show screenshots of tested endpoints from frontend
+
+------------------------------------------------------------------------
+
+## 🧩 Features to Implement
+
+### 1. Login Page
+
+-   User enters Username & Password\
+-   Calls: `POST /login`\
+-   On success:
+    -   Store JWT in sessionStorage\
+    -   Redirect to dashboard
+
+------------------------------------------------------------------------
+
+### 2. Protected Dashboard Page
+
+-   Only accessible if JWT exists in session\
+-   Calls: `GET /protected`\
+-   Add token in header:
+
+```{=html}
+<!-- -->
+```
+    Authorization: Bearer <token>
+
+------------------------------------------------------------------------
+
+### 3. Logout Functionality
+
+-   Clear session:
+
+```{=html}
+<!-- -->
+```
+    sessionStorage.removeItem("token");
+
+-   Redirect to login page
+
+------------------------------------------------------------------------
+
+## 🧩 Features to Implement
+
+### 1. Login Page
+
+-   User enters Username & Password\
+-   Calls: `POST /login`\
+-   On success:
+    -   Store JWT in sessionStorage\
+    -   Redirect to dashboard
+
+------------------------------------------------------------------------
+
+### 2. Protected Dashboard Page
+
+-   Only accessible if JWT exists in session\
+-   Calls: `GET /protected`\
+-   Add token in header:
+
+```{=html}
+<!-- -->
+```
+    Authorization: Bearer <token>
+
+------------------------------------------------------------------------
+
+### 3. Logout Functionality
+
+-   Clear session:
+
+```{=html}
+<!-- -->
+```
+    sessionStorage.removeItem("token");
+
+-   Redirect to login page
+
+------------------------------------------------------------------------
+
+## 💻 Tech Stack
+
+-   React (Frontend Framework)
+-   Bootstrap (Layout & Styling)
+-   Material UI (Components like buttons, cards)
+-   Fetch / Axios for API calls
+
+------------------------------------------------------------------------
+
+## ⚙️ Installation
+
+``` bash
+npx create-react-app frontend
+cd frontend
+npm install axios bootstrap @mui/material @emotion/react @emotion/styled
+```
+
+Add Bootstrap in `index.js`:
+
+``` js
+import 'bootstrap/dist/css/bootstrap.min.css';
+```
+
+------------------------------------------------------------------------
+
+## 🧱 React Implementation
+
+### 📄 Login.js
+
+``` jsx
+import React, { useState } from "react";
+import axios from "axios";
+
+function Login() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const login = async () => {
+    const res = await axios.post("http://localhost:5000/login", {
+      username,
+      password
+    });
+
+    if (res.data.token) {
+      sessionStorage.setItem("token", res.data.token);
+      window.location.href = "/dashboard";
+    }
+  };
+
+  return (
+    <div className="container mt-5">
+      <h2>Login</h2>
+      <input className="form-control" onChange={(e)=>setUsername(e.target.value)} placeholder="Username" /><br/>
+      <input className="form-control" type="password" onChange={(e)=>setPassword(e.target.value)} placeholder="Password" /><br/>
+      <button className="btn btn-primary" onClick={login}>Login</button>
+    </div>
+  );
+}
+
+export default Login;
+```
+
+------------------------------------------------------------------------
+
+### 📄 Dashboard.js
+
+``` jsx
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
+function Dashboard() {
+  const [data, setData] = useState("");
+  const token = sessionStorage.getItem("token");
+
+  useEffect(() => {
+    if (!token) {
+      window.location.href = "/";
+    }
+  }, []);
+
+  const getData = async () => {
+    const res = await axios.get("http://localhost:5000/protected", {
+      headers: {
+        Authorization: "Bearer " + token
+      }
+    });
+    setData(res.data);
+  };
+
+  const logout = () => {
+    sessionStorage.removeItem("token");
+    window.location.href = "/";
+  };
+
+  return (
+    <div className="container mt-5">
+      <h2>Dashboard</h2>
+      <button className="btn btn-success me-2" onClick={getData}>Fetch Data</button>
+      <button className="btn btn-danger" onClick={logout}>Logout</button>
+      <p>{data}</p>
+    </div>
+  );
+}
+
+export default Dashboard;
+```
+
+------------------------------------------------------------------------
+
+## 🔐 Session-Based Restriction Logic
+
+-   If token exists → allow dashboard\
+-   If no token → redirect to login
+
+------------------------------------------------------------------------
+
+## 📸 Required Screenshots
+
+1.  Login from frontend (React UI)\
+2.  Token stored in sessionStorage (DevTools)\
+3.  Access protected API (data visible on UI)\
+4.  Unauthorized access (redirect to login)\
+5.  Logout functionality
+
+------------------------------------------------------------------------
+
+## 📁 Project Structure
+
+    frontend/
+    ├── src/
+    │   ├── components/
+    │   │   ├── Login.js
+    │   │   └── Dashboard.js
+    │   ├── App.js
+    │   └── index.js
+
+------------------------------------------------------------------------
+
+## 📘 README Explanation
+
+-   React frontend connects to backend APIs\
+-   JWT stored in sessionStorage\
+-   Protected routes accessed using token\
+-   Logout clears session
+
+------------------------------------------------------------------------
 
 # 🧪 Experiment 7 Guides
 
