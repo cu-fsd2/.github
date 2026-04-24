@@ -15,6 +15,7 @@
   - [📋 Requirements](#-requirements)
   - [📋 Project Submission Guidelines](#project-submission-guidelines)
 - [🧪 Experiment Guides](#-experiment-1-guides)
+  - [🧪 Experiment 10 Guides](#-experiment-10-guides)
   - [🧪 Experiment 9 Guides](#-experiment-9-guides)
   - [🧪 Experiment 8 Guides](#-experiment-8-guides)
   - [🧪 Experiment 7 Guides](#-experiment-7-guides)
@@ -24,7 +25,6 @@
   - [🧪 Experiment 3 Guides](#-experiment-3-guides)
   - [🧪 Experiment 2 Guides](#-experiment-2-guides)
   - [🧪 Experiment 1 Guides](#-experiment-1-guides)
-  - [🧪 MST Experiment Guides](#-mst-experiment-guides)
 
 ---
 
@@ -188,6 +188,269 @@ Create a comprehensive README equivalent to your practical file:
 - ✅ Add detailed explanations
 - ✅ Document your implementation approach
 - ✅ Include screenshots or demos (if applicable)
+
+# 🧪 Experiment 10 Guides
+
+## CRUD Operations on Database using Node.js + Express.js Backend
+
+
+This experiment demonstrates how to perform **CRUD Operations**
+(Create, Read, Update, Delete) on a database using **Node.js** and
+**Express.js** as backend.
+
+## 🚨 Important Instructions
+- **Deadline**: 24 April
+
+### 📝 Google Form
+
+Please submit your project details using the following link:
+
+<div align="center">
+  <a href="https://forms.gle/kkAUKx6HYuG9nzFYA">
+    <img src="https://img.shields.io/badge/Submit%20to%20Google%20Form-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Submit to Google Form" />
+  </a>
+</div>
+
+---
+
+## 🎯 Objective
+
+- Build REST APIs using Node.js and Express.js
+- Connect backend with database
+- Perform Create, Read, Update, Delete operations
+- Test APIs using Postman / Browser
+- Understand backend routing and controllers
+
+---
+
+## 🧩 Features to Implement
+
+### 1. Create Record
+
+- Add new student/user data into database
+- Example fields:
+  - name
+  - email
+  - course
+
+---
+
+### 2. Read Records
+
+- Fetch all records
+- Fetch single record using ID
+
+---
+
+### 3. Update Record
+
+- Modify existing data using ID
+
+---
+
+### 4. Delete Record
+
+- Remove record using ID
+
+---
+
+## 💻 Tech Stack
+
+- Node.js
+- Express.js
+- MongoDB (or MySQL)
+- Mongoose / mysql2
+- Postman
+
+---
+
+## ⚙️ Installation
+
+```bash
+mkdir experiment10
+cd experiment10
+npm init -y
+npm install express mongoose cors nodemon
+```
+
+---
+
+## 📁 Project Structure
+
+```text
+experiment10/
+├── server.js
+├── models/
+│   └── Student.js
+├── routes/
+│   └── studentRoutes.js
+├── package.json
+```
+
+---
+
+## 🧱 Backend Implementation
+
+### 📄 server.js
+
+```js
+const express = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
+
+const app = express();
+app.use(express.json());
+app.use(cors());
+
+mongoose.connect("mongodb://127.0.0.1:27017/collegeDB")
+.then(() => console.log("Database Connected"))
+.catch(err => console.log(err));
+
+const studentRoutes = require("./routes/studentRoutes");
+app.use("/api/students", studentRoutes);
+
+app.listen(5000, () => {
+  console.log("Server running on port 5000");
+});
+```
+
+---
+
+### 📄 models/Student.js
+
+```js
+const mongoose = require("mongoose");
+
+const studentSchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  course: String
+});
+
+module.exports = mongoose.model("Student", studentSchema);
+```
+
+---
+
+### 📄 routes/studentRoutes.js
+
+```js
+const express = require("express");
+const router = express.Router();
+const Student = require("../models/Student");
+
+// CREATE
+router.post("/", async (req, res) => {
+  const data = await Student.create(req.body);
+  res.json(data);
+});
+
+// READ ALL
+router.get("/", async (req, res) => {
+  const data = await Student.find();
+  res.json(data);
+});
+
+// READ SINGLE
+router.get("/:id", async (req, res) => {
+  const data = await Student.findById(req.params.id);
+  res.json(data);
+});
+
+// UPDATE
+router.put("/:id", async (req, res) => {
+  const data = await Student.findByIdAndUpdate(req.params.id, req.body, { new: true });
+  res.json(data);
+});
+
+// DELETE
+router.delete("/:id", async (req, res) => {
+  await Student.findByIdAndDelete(req.params.id);
+  res.json({ message: "Record Deleted Successfully" });
+});
+
+module.exports = router;
+```
+
+---
+
+## ▶️ Run Project
+
+```bash
+nodemon server.js
+```
+
+Server runs on:
+
+```text
+http://localhost:5000
+```
+
+---
+
+## 🧪 API Testing (Postman)
+
+### Create Record
+
+```http
+POST /api/students
+```
+
+Body:
+
+```json
+{
+  "name": "Rahul",
+  "email": "rahul@gmail.com",
+  "course": "BCA"
+}
+```
+
+### Get All Records
+
+```http
+GET /api/students
+```
+
+### Get Single Record
+
+```http
+GET /api/students/:id
+```
+
+### Update Record
+
+```http
+PUT /api/students/:id
+```
+
+### Delete Record
+
+```http
+DELETE /api/students/:id
+```
+
+---
+
+## 📸 Required Screenshots
+
+1. MongoDB Connected Message
+2. Create Record API Success
+3. Read All Records Output
+4. Update Record Success
+5. Delete Record Success
+6. Database Collection View
+
+---
+
+## 📘 README Explanation
+
+- Node.js and Express.js used as backend
+- MongoDB stores records
+- CRUD operations implemented with REST APIs
+- Tested using Postman
+
+---
 
 # 🧪 Experiment 9 Guides
 
@@ -1864,20 +2127,4 @@ screenshots/
 └── redux-feature.png
 ```
 
----
-## 🧪 MST Experiment Guides  
-
-> ⚠️  
-> **Deadline:** 10 March 2026  
-
-
-### 📝 Google Form
-
-Please submit your project details using the following link:
-
-<div align="center">
-  <a href="https://forms.gle/6BeeM7dkTrgJuHNd9">
-    <img src="https://img.shields.io/badge/Submit%20to%20Google%20Form-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Submit to Google Form" />
-  </a>
-</div>
 
