@@ -74,7 +74,7 @@ All source materials for the course are available at: <a href="https://github.co
 
 <div align="center">
   <a href="https://vimeo.com/1156013385?share=copy&fl=sv&fe=ci">
-    <img src="https://img.shields.io/badge/Watch%20Submission%20Demo-1bB7EA?style=for-the-badge&logo=vimeo&logoColor=white" alt="Watch Submission Demo" />
+    <img src="https://img.shields.io/badge/View%20Assignment-ff9800?style=for-the-badge&logo=microsoftword&logoColor=white" alt="Watch Submission Demo" />
   </a>
 </div>
 
