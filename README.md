@@ -10,6 +10,8 @@
 
 - [📖 Course Materials](#-course-materials)
 - [🎯 Assignment Structure & Grading](#-assignment-structure--grading)
+- [📝 Quiz Section](#-quiz-section)
+- [📂 Assignment Section](#-assignment-section)
 - [📤 Submission](#-submission)
   - [🎥 Demo Video](#-demo-video)
   - [📋 Requirements](#-requirements)
@@ -45,7 +47,28 @@ All source materials for the course are available at: <a href="https://github.co
 | Conduct | 15 |
 | MaxMarks | 30 |
 
+### 📝 Quiz Section
+<a href="https://forms.gle/nSsS4vSohNmZ6sib6">
+  <img src="https://img.shields.io/badge/Take%20Quiz-28a745?style=for-the-badge&logo=googleforms&logoColor=white" alt="Take Quiz" />
+</a>
 
+<br><br>
+
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" width="180" alt="Quiz Illustration"/>
+
+<br><br>
+
+### 📂 Assignment Section
+
+<a href="https://forms.gle/9ymJZqvNmoBho9yq9">
+  <img src="https://img.shields.io/badge/View%20Assignment-ff9800?style=for-the-badge&logo=microsoftword&logoColor=white" alt="View Assignment" />
+</a>
+
+<br><br>
+
+<img src="https://cdn-icons-png.flaticon.com/512/3976/3976626.png" width="180" alt="Assignment Illustration"/>
+
+</div>
 
 ### 🎥 Demo Video
 
